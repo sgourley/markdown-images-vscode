@@ -36,4 +36,4 @@ jobs:
       with:
         name: package
     - run: ls -R
-    - run: azcopy copy *.tgz "https://sobadev2205.blob.core.windows.net/packages/${{ secrets.PACKAGES_FOLDER_SAS }}"
+    - run: azcopy copy *.vsix "https://sobadev2205.blob.core.windows.net/packages/${{ secrets.PACKAGES_FOLDER_SAS }}"
