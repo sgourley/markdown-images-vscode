@@ -1,11 +1,18 @@
 
-# vscode-markdown-images
+# Markdown Images
 
-Add-in for vscode markdown previewer to link images to a photo library.
+Show images in markdown preview from a photo library.
 
-## Developer references
+This is early-stage software and probably _not_ the add-in you are looking for...
 
-- [Extension API](https://code.visualstudio.com/api)
-- [Markdown Extension](https://code.visualstudio.com/api/extension-guides/markdown-extension)
-- [markdown-it design principles](https://github.com/markdown-it/markdown-it/blob/master/docs/architecture.md)
-- [helloworld-minimal-sample](https://github.com/microsoft/vscode-extension-samples/tree/main/helloworld-minimal-sample)
+## Usage
+
+Reference your images with an exclamation mark prefix, as below. This prefix will be replaced with the photo library url when displayed in the markdown preview window.
+
+```markdown
+![](!path/to/image.jpeg)
+```
+
+## Configuration
+
+The url to a photo library is configurable with the `markdown.images.library.url` setting.
