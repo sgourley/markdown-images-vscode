@@ -1,0 +1,40 @@
+{
+  "name": "vscode-markdown-images",
+  "displayName": "Markdown Image Library",
+  "description": "Add-in for vscode markdown previewer to link images to a photo library.",
+  "publisher": "sgourley",
+  "author": "Steven Gourley",
+  "license": "MIT",
+  "version": "0.1.0",
+  "main": "./extension.js",
+  "web": "./extension.js",
+  "scripts": {},
+  "engines": {
+    "vscode": "^1.34.0"
+  },
+  "activationEvents": [],
+  "contributes": {
+    "markdown.markdownItPlugins": true,
+    "configuration": {
+      "title": "Markdown Images",
+      "properties": {
+        "markdown.images.library.url": {
+          "type": "string",
+          "description": "URL of image library to use when previewing markdown for image references beginning with '!'.",
+          "default": ""
+        }
+      }
+    }
+  },
+  "homepage": "https://github.com/sgourley/vscode-markdown-images#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sgourley/vscode-markdown-images.git"
+  },
+  "bugs": {
+    "url": "https://github.com/sgourley/vscode-markdown-images/issues"
+  },
+  "devDependencies": {
+    "vsce": "^2.8.0"
+  }
+}
