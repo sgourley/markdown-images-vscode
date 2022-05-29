@@ -8,7 +8,6 @@
   "version": "0.1.0",
   "main": "./extension.js",
   "web": "./extension.js",
-  "scripts": {},
   "engines": {
     "vscode": "^1.34.0"
   },
@@ -36,5 +35,8 @@
   },
   "devDependencies": {
     "vsce": "^2.8.0"
-  }
+  },
+	"scripts": {
+		"package": "vsce package"
+	}
 }
