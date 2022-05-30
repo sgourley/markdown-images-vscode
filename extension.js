@@ -4,11 +4,11 @@ var vscode = require('vscode');
 function activate(ctx) {
 
     var key = 'markdown.images.library';
-    var url = vscode.workspace.getConfiguration(key).get('url');
+    var url = encodeURI(vscode.workspace.getConfiguration(key).get('url') || '');
 
     ctx.subscriptions.push(vscode.workspace.onDidChangeConfiguration(function (e) {
         if (e.affectsConfiguration(key)) {
-            url = vscode.workspace.getConfiguration(key).get('url');
+            url = encodeURI(vscode.workspace.getConfiguration(key).get('url') || '');
             vscode.commands.executeCommand('markdown.preview.refresh');
         }
     }));
